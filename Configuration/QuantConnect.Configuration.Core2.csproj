@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <generateassemblyconfigurationattribute>false</generateassemblyconfigurationattribute>
+    <generateassemblydescriptionattribute>false</generateassemblydescriptionattribute>
+    <generateassemblyproductattribute>false</generateassemblyproductattribute>
+    <generateassemblytitleattribute>false</generateassemblytitleattribute>
+    <generateassemblycompanyattribute>false</generateassemblycompanyattribute>
+    <generateassemblyfileversionattribute>false</generateassemblyfileversionattribute>
+    <generateassemblyinformationalversionattribute>false</generateassemblyinformationalversionattribute>
+    <generateassemblyversionattribute>false</generateassemblyversionattribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Core, Version=4.0.0.0, Culture=neutral,    PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\Properties\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApplicationParser.cs" />
+    <Compile Include="CommandLineOption.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="LeanArgumentParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolboxArgumentParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\QuantConnect.Logging.Core2.csproj" />
+  </ItemGroup>
+
+</Project>
